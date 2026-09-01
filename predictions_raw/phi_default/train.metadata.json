@@ -1,0 +1,31 @@
+{
+  "model_key": "phi",
+  "model": "microsoft/Phi-4-mini-instruct",
+  "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/phi-4-mini-instruct",
+  "condition": "default",
+  "cuda_visible_devices": "6",
+  "dtype": "bfloat16",
+  "tensor_parallel_size": 1,
+  "temperature": 0,
+  "max_tokens": 32,
+  "max_model_len": 4096,
+  "batch_size": 16,
+  "gpu_memory_utilization": 0.85,
+  "reasoning_toggle": {
+    "supports_toggle": false,
+    "reason": "chat template does not reference enable_thinking",
+    "rendered_on_sha256": null,
+    "rendered_off_sha256": null
+  },
+  "prompt_version": "infotabs-predictions-only-v1",
+  "split": "train",
+  "input_path": "/home/wangyuefeng/projects/infotabs-ensemble/data/processed/train.jsonl",
+  "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/train.jsonl",
+  "invalid_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/train.invalid.jsonl",
+  "run_started_utc": "2026-09-01T02:47:17.821969+00:00",
+  "run_finished_utc": "2026-09-01T02:47:21.937172+00:00",
+  "requested_count": 16538,
+  "resumed_count": 16406,
+  "valid_count_this_run": 16538,
+  "invalid_count_this_run": 0
+}

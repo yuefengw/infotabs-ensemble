@@ -1,0 +1,63 @@
+# Model checkpoints and model caches
+models/*
+!models/README.md
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+
+# Dataset files and generated dataset records
+data/*
+!data/README.md
+*.parquet
+*.arrow
+
+# Offline dependency bundles
+env/wheels/
+env/wheels.tar
+*.whl
+
+# Runtime logs and scratch outputs
+logs/*
+!logs/README.md
+*.log
+*.pid
+tmp/
+temp/
+.tmp/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Hugging Face and model caches
+.cache/
+.huggingface/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+.netrc
+env/sxu_net.sh
+env/*.local
+credentials*
+*.pem
+*.key
+
+# Temporary shard inputs/outputs
+*shard*.jsonl
+*shards*/

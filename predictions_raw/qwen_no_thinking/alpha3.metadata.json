@@ -1,0 +1,33 @@
+{
+  "model_key": "qwen",
+  "model": "Qwen/Qwen3-8B",
+  "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/qwen3-8b",
+  "condition": "no_thinking",
+  "cuda_visible_devices": "5",
+  "dtype": "bfloat16",
+  "tensor_parallel_size": 1,
+  "temperature": 0,
+  "max_tokens": 1024,
+  "max_model_len": 4096,
+  "batch_size": 1,
+  "gpu_memory_utilization": 0.85,
+  "reasoning_toggle": {
+    "supports_toggle": true,
+    "reason": "rendered prompts differ",
+    "rendered_on_sha256": "9b952439bb3a587cd500a18b6588aedcdeea6b3a377aec37c6581fde382f7ebc",
+    "rendered_off_sha256": "f6036ba833ebfe474adfc3fa8787d200f190d939ff165e37e166cbd2388c3121",
+    "rendered_on_preview": "<|im_start|>user\nGiven the following table and hypothesis,\ndetermine their logical relationship.\n\nLabels:\nEntailment\nContradiction\nNeutral\n\nTable:\nOlympic: 1912\n\nHypothesis:\nThe sport became an Olympic sport in 1912.\n\nReason about the table",
+    "rendered_off_preview": "<|im_start|>user\nGiven the following table and hypothesis,\ndetermine their logical relationship.\n\nLabels:\nEntailment\nContradiction\nNeutral\n\nTable:\nOlympic: 1912\n\nHypothesis:\nThe sport became an Olympic sport in 1912.\n\nReason about the table"
+  },
+  "prompt_version": "infotabs-predictions-only-v1",
+  "split": "alpha3",
+  "input_path": "/home/wangyuefeng/projects/infotabs-ensemble/data/processed/alpha3.jsonl",
+  "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/alpha3.jsonl",
+  "invalid_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/alpha3.invalid.jsonl",
+  "run_started_utc": "2026-08-31T14:13:03.581604+00:00",
+  "run_finished_utc": "2026-08-31T14:13:22.333242+00:00",
+  "requested_count": 1800,
+  "resumed_count": 1799,
+  "valid_count_this_run": 1800,
+  "invalid_count_this_run": 0
+}

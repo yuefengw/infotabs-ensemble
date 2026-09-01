@@ -1,0 +1,444 @@
+{
+  "generated_at_utc": "2026-09-01T06:58:29.732298+00:00",
+  "valid": true,
+  "conditions": {
+    "qwen": [
+      "thinking",
+      "no_thinking"
+    ],
+    "gemma": [
+      "default"
+    ],
+    "mistral": [
+      "default"
+    ],
+    "deepseek": [
+      "default"
+    ],
+    "phi": [
+      "default"
+    ]
+  },
+  "splits": {
+    "dev": {
+      "qwen": {
+        "thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_thinking/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 544,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        },
+        "no_thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 605,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "gemma": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 6,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "mistral": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/mistral_default/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 0,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "deepseek": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/deepseek_default/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 29,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "phi": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 14,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      }
+    },
+    "alpha1": {
+      "qwen": {
+        "thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_thinking/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 781,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        },
+        "no_thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 626,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "gemma": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 5,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "mistral": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/mistral_default/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 0,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "deepseek": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/deepseek_default/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 39,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "phi": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 14,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      }
+    },
+    "alpha2": {
+      "qwen": {
+        "thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_thinking/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 762,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        },
+        "no_thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 632,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "gemma": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 6,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "mistral": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/mistral_default/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 0,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "deepseek": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/deepseek_default/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 25,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "phi": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 16,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      }
+    },
+    "alpha3": {
+      "qwen": {
+        "thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_thinking/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 378,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        },
+        "no_thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 468,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "gemma": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 7,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "mistral": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/mistral_default/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 0,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "deepseek": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/deepseek_default/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 31,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "phi": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 14,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      }
+    },
+    "train": {
+      "qwen": {
+        "thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_thinking/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 3748,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        },
+        "no_thinking": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/qwen_no_thinking/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 4683,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "gemma": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 32,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "mistral": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/mistral_default/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 0,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "deepseek": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/deepseek_default/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 254,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "phi": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/phi_default/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 132,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      }
+    }
+  }
+}

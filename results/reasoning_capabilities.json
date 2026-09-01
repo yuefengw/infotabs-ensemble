@@ -1,0 +1,74 @@
+{
+  "generated_at_utc": "2026-08-31T12:14:32.004510+00:00",
+  "probe_prompt": "Given the following table and hypothesis,\ndetermine their logical relationship.\n\nLabels:\nEntailment\nContradiction\nNeutral\n\nTable:\nOlympic: 1912\n\nHypothesis:\nThe sport became an Olympic sport in 1912.\n\nReason about the table carefully.\nReturn the final answer in the form:\n\nFINAL: Entailment",
+  "models": {
+    "qwen": {
+      "available": true,
+      "repo_id": "Qwen/Qwen3-8B",
+      "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/qwen3-8b",
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "supports_toggle": true,
+      "reason": "rendered prompts differ",
+      "rendered_on_sha256": "9b952439bb3a587cd500a18b6588aedcdeea6b3a377aec37c6581fde382f7ebc",
+      "rendered_off_sha256": "f6036ba833ebfe474adfc3fa8787d200f190d939ff165e37e166cbd2388c3121",
+      "rendered_on_preview": "<|im_start|>user\nGiven the following table and hypothesis,\ndetermine their logical relationship.\n\nLabels:\nEntailment\nContradiction\nNeutral\n\nTable:\nOlympic: 1912\n\nHypothesis:\nThe sport became an Olympic sport in 1912.\n\nReason about the table",
+      "rendered_off_preview": "<|im_start|>user\nGiven the following table and hypothesis,\ndetermine their logical relationship.\n\nLabels:\nEntailment\nContradiction\nNeutral\n\nTable:\nOlympic: 1912\n\nHypothesis:\nThe sport became an Olympic sport in 1912.\n\nReason about the table",
+      "conditions": [
+        "thinking",
+        "no_thinking"
+      ]
+    },
+    "gemma": {
+      "available": true,
+      "repo_id": "google/gemma-3-12b-it",
+      "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/gemma-3-12b-it",
+      "chat_template_sha256": "7de1c58e208eda46e9c7f86397df37ec49883aeece39fb961e0a6b24088dd3c4",
+      "supports_toggle": false,
+      "reason": "chat template does not reference enable_thinking",
+      "rendered_on_sha256": null,
+      "rendered_off_sha256": null,
+      "conditions": [
+        "default"
+      ]
+    },
+    "mistral": {
+      "available": true,
+      "repo_id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/mistral-nemo-instruct-2407",
+      "chat_template_sha256": "e4676cb56dffea7782fd3e2b577cfaf1e123537e6ef49b3ec7caa6c095c62272",
+      "supports_toggle": false,
+      "reason": "chat template does not reference enable_thinking",
+      "rendered_on_sha256": null,
+      "rendered_off_sha256": null,
+      "conditions": [
+        "default"
+      ]
+    },
+    "deepseek": {
+      "available": true,
+      "repo_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+      "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/deepseek-r1-distill-qwen-7b",
+      "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+      "supports_toggle": false,
+      "reason": "chat template does not reference enable_thinking",
+      "rendered_on_sha256": null,
+      "rendered_off_sha256": null,
+      "conditions": [
+        "default"
+      ]
+    },
+    "phi": {
+      "available": true,
+      "repo_id": "microsoft/Phi-4-mini-instruct",
+      "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/phi-4-mini-instruct",
+      "chat_template_sha256": "febf589225c9728ab791f52e8897d7607a823d45368f0a4c92fa68997b40cce9",
+      "supports_toggle": false,
+      "reason": "chat template does not reference enable_thinking",
+      "rendered_on_sha256": null,
+      "rendered_off_sha256": null,
+      "conditions": [
+        "default"
+      ]
+    }
+  }
+}

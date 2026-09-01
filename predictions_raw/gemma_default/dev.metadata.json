@@ -1,0 +1,31 @@
+{
+  "model_key": "gemma",
+  "model": "google/gemma-3-12b-it",
+  "model_path": "/home/wangyuefeng/projects/infotabs-ensemble/models/gemma-3-12b-it",
+  "condition": "default",
+  "cuda_visible_devices": "7",
+  "dtype": "bfloat16",
+  "tensor_parallel_size": 1,
+  "temperature": 0,
+  "max_tokens": 1024,
+  "max_model_len": 4096,
+  "batch_size": 16,
+  "gpu_memory_utilization": 0.85,
+  "reasoning_toggle": {
+    "supports_toggle": false,
+    "reason": "chat template does not reference enable_thinking",
+    "rendered_on_sha256": null,
+    "rendered_off_sha256": null
+  },
+  "prompt_version": "infotabs-predictions-only-v1",
+  "split": "dev",
+  "input_path": "/home/wangyuefeng/projects/infotabs-ensemble/data/processed/dev.jsonl",
+  "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/dev.jsonl",
+  "invalid_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/gemma_default/dev.invalid.jsonl",
+  "run_started_utc": "2026-08-31T12:53:39.948462+00:00",
+  "run_finished_utc": "2026-08-31T12:54:06.673711+00:00",
+  "requested_count": 1800,
+  "resumed_count": 1794,
+  "valid_count_this_run": 1800,
+  "invalid_count_this_run": 0
+}

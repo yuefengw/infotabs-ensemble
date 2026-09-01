@@ -1,0 +1,20 @@
+# CUDA 12.4 / Python 3.10 set selected for NVIDIA driver 550.54.14.
+# vLLM 0.8.5 provides Qwen3 and Gemma 3 support while retaining the
+# PyTorch 2.6.0 CUDA 12.4 runtime expected by this server.
+torch==2.6.0
+vllm==0.8.5
+transformers==4.51.3
+tokenizers==0.21.1
+accelerate==1.7.0
+safetensors==0.5.3
+huggingface-hub==0.31.2
+sentencepiece==0.2.0
+protobuf==4.25.3
+pandas==2.2.3
+numpy==1.26.4
+scipy==1.14.1
+tqdm==4.67.1
+PyYAML==6.0.2
+# vLLM's Ray cgraph extra leaves CuPy unbounded; pin to the prepared CUDA 12
+# wheel to keep dependency resolution reproducible and avoid alternate builds.
+cupy-cuda12x==13.6.0
