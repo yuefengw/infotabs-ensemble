@@ -38,6 +38,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-retries", type=int, default=3)
     parser.add_argument("--retry-delay", type=float, default=2.0)
     parser.add_argument("--max-samples", type=int)
+    parser.add_argument("--concise", action="store_true", help="Ask Ollama to return only the label")
     return parser.parse_args()
 
 
@@ -107,10 +108,16 @@ def normalized_host(value: str) -> str:
     return value
 
 
-def post_generate(host: str, model: str, prompt: str, max_tokens: int, timeout: float) -> str:
+def post_generate(host: str, model: str, prompt: str, max_tokens: int, timeout: float, concise: bool = False) -> str:
+    messages = [{"role": "user", "content": prompt}]
+    if concise:
+        messages.insert(0, {
+            "role": "system",
+            "content": "Output exactly one word: Entailment, Contradiction, or Neutral. No explanation.",
+        })
     payload = {
         "model": model,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "stream": False,
         "options": {"temperature": 0, "num_predict": max_tokens},
     }
@@ -141,7 +148,7 @@ def generate_with_retry(args: argparse.Namespace, model: str, prompt: str) -> st
     last_error: Exception | None = None
     for attempt in range(args.max_retries + 1):
         try:
-            return post_generate(args.host, model, prompt, args.max_tokens, args.request_timeout)
+            return post_generate(args.host, model, prompt, args.max_tokens, args.request_timeout, args.concise)
         except RuntimeError as exc:
             last_error = exc
             if attempt >= args.max_retries:
@@ -176,6 +183,7 @@ def main() -> None:
         "condition": "default",
         "temperature": 0,
         "max_tokens": args.max_tokens,
+        "concise": args.concise,
         "request_timeout": args.request_timeout,
         "max_retries": args.max_retries,
         "prompt_version": PROMPT_VERSION,

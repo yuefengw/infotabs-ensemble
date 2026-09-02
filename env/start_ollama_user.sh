@@ -6,6 +6,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export OLLAMA_HOST="${OLLAMA_HOST:-127.0.0.1:11434}"
 export OLLAMA_NUM_PARALLEL="${OLLAMA_NUM_PARALLEL:-1}"
 export OLLAMA_MAX_LOADED_MODELS="${OLLAMA_MAX_LOADED_MODELS:-1}"
+export OLLAMA_VULKAN="${OLLAMA_VULKAN:-0}"
+export OLLAMA_CONTEXT_LENGTH="${OLLAMA_CONTEXT_LENGTH:-4096}"
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-5}"
 
 command -v ollama >/dev/null || { printf 'ollama is not on PATH\n' >&2; exit 1; }

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-01T06:58:29.732298+00:00",
+  "generated_at_utc": "2026-09-01T12:10:37.342837+00:00",
   "valid": true,
   "conditions": {
     "qwen": [
@@ -16,6 +16,9 @@
       "default"
     ],
     "phi": [
+      "default"
+    ],
+    "llama": [
       "default"
     ]
   },
@@ -96,6 +99,20 @@
           "completed": 1800,
           "invalid_final": 0,
           "invalid_attempts": 14,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "llama": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/llama_ollama_default/dev.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 150,
           "missing": [],
           "duplicate": [],
           "extra": [],
@@ -186,6 +203,20 @@
           "gold_mismatch": [],
           "valid": true
         }
+      },
+      "llama": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/llama_ollama_default/alpha1.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 93,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
       }
     },
     "alpha2": {
@@ -264,6 +295,20 @@
           "completed": 1800,
           "invalid_final": 0,
           "invalid_attempts": 16,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "llama": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/llama_ollama_default/alpha2.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 77,
           "missing": [],
           "duplicate": [],
           "extra": [],
@@ -354,6 +399,20 @@
           "gold_mismatch": [],
           "valid": true
         }
+      },
+      "llama": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/llama_ollama_default/alpha3.jsonl",
+          "expected": 1800,
+          "completed": 1800,
+          "invalid_final": 0,
+          "invalid_attempts": 164,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
       }
     },
     "train": {
@@ -432,6 +491,20 @@
           "completed": 16538,
           "invalid_final": 0,
           "invalid_attempts": 132,
+          "missing": [],
+          "duplicate": [],
+          "extra": [],
+          "gold_mismatch": [],
+          "valid": true
+        }
+      },
+      "llama": {
+        "default": {
+          "output_path": "/home/wangyuefeng/projects/infotabs-ensemble/predictions_raw/llama_ollama_default/train.jsonl",
+          "expected": 16538,
+          "completed": 16538,
+          "invalid_final": 0,
+          "invalid_attempts": 119,
           "missing": [],
           "duplicate": [],
           "extra": [],

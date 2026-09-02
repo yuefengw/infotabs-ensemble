@@ -46,6 +46,8 @@ ExecStart=$HOME/.local/bin/ollama serve
 Environment=OLLAMA_HOST=127.0.0.1:11434
 Environment=OLLAMA_NUM_PARALLEL=1
 Environment=OLLAMA_MAX_LOADED_MODELS=1
+Environment=OLLAMA_VULKAN=0
+Environment=OLLAMA_CONTEXT_LENGTH=4096
 Environment=CUDA_VISIBLE_DEVICES=$gpu
 Restart=on-failure
 RestartSec=5

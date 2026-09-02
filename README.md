@@ -14,7 +14,7 @@
 |---|---|---|---|
 | `Qwen_Thinking` | `Qwen/Qwen3-8B` | thinking | vLLM |
 | `Qwen_NoThinking` | `Qwen/Qwen3-8B` | no thinking | vLLM |
-| `Llama` | `meta-llama/Llama-3.1-8B-Instruct` | default | 未运行，结果为 `NA` |
+| `Llama` | `meta-llama/Llama-3.1-8B-Instruct` | default | Ollama `llama3.1:8b`（Q4_K_M），已完成五个 split |
 | `Gemma` | `google/gemma-3-12b-it` | default | vLLM |
 | `Mistral` | `mistralai/Mistral-Nemo-Instruct-2407` | default | vLLM |
 | `DeepSeek` | `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B` | default | vLLM |
@@ -22,14 +22,27 @@
 
 只有 Qwen3 的官方 chat template 在本实验环境中确认支持可控的
 `enable_thinking=True/False`，因此只有 Qwen 同时运行 Thinking 和 NoThinking。
-Llama 的 Hugging Face 权重需要额外授权，本次正式结果将该列保留为 `NA`。
+Llama 的 Hugging Face 权重需要额外授权，因此改用官方 Ollama `llama3.1:8b`
+标签。该模型已完成五个 split 的正式批量预测，结果已写入宽表、长表和
+`predictions_raw/llama_ollama_default/`。
 
 ## 最终结果
 
 - 样本总数：23,738（`train=16,538`，其余四个 split 各 1,800）。
 - 宽表：23,738 条数据行。
-- 长表：166,166 条数据行，即每个样本 7 个模型/条件位置，其中 Llama 为 `NA`。
+- 长表：166,166 条数据行，即每个样本 7 个模型/条件位置，包含 Llama 预测。
 - 校验状态：`results/coverage_report.json` 中 `valid=true`。
+
+Llama 准确率（由 `results/all_predictions.csv` 计算）：
+
+| Split | Correct / Total | Accuracy |
+|---|---:|---:|
+| `train` | 10,249 / 16,538 | 61.97% |
+| `dev` | 1,095 / 1,800 | 60.83% |
+| `alpha1` | 1,085 / 1,800 | 60.28% |
+| `alpha2` | 1,057 / 1,800 | 58.72% |
+| `alpha3` | 1,135 / 1,800 | 63.06% |
+| 全部 | 14,621 / 23,738 | 61.59% |
 
 关键文件：
 
@@ -92,7 +105,8 @@ Transformers 4.51.3
 NVIDIA RTX A6000
 ```
 
-实验约束：单模型单 GPU、BF16、`tensor_parallel_size=1`、`temperature=0`。
+vLLM 模型使用单模型单 GPU、BF16、`tensor_parallel_size=1`、`temperature=0`；
+Llama 使用 Ollama Q4_K_M 量化权重、单 GPU 和 `temperature=0`。
 
 ### 在线安装
 
@@ -255,19 +269,22 @@ python scripts/build_prediction_table.py
 }
 ```
 
-## Ollama Llama（可选）
+## Ollama Llama
 
 Llama 3.1 的 Hugging Face 仓库受 gated license 保护。本项目提供 Ollama 路径，
-但需要先从官方来源获得 Linux archive 并安装：
+服务器已完成 Q4_K_M 量化模型的安装和离线导入。服务固定使用 GPU 5，并关闭
+Vulkan 后端：
 
 ```bash
-CUDA_VISIBLE_DEVICES=5 bash env/install_ollama_user.sh \
-  --archive /path/to/ollama-linux-amd64.tar.zst
-bash env/start_ollama_user.sh
-bash env/pull_llama_ollama.sh
+CUDA_VISIBLE_DEVICES=5 bash env/start_ollama_user.sh
 python scripts/test_ollama.py
-python scripts/run_ollama.py --model llama --split dev
+python scripts/run_ollama.py --model llama
 ```
+
+不传 `--split` 时会运行全部五个 split。若模型的长解释在默认 `256` token 上限前
+没有输出最终标签，可使用 `--concise --max-tokens 32`，要求 Ollama 只返回一个标签。
+本次批量结果对这类未完成样本使用了该续跑方式；已有有效预测保持不变，所有最终标签
+仍经过同一解析器和覆盖校验。
 
 ## 复现注意事项
 
@@ -275,5 +292,5 @@ python scripts/run_ollama.py --model llama --split dev
 - 不要混用多张可见 GPU；每个 `run_model.py` 进程应只设置一个 GPU。
 - 不要在推理进程仍写文件时运行最终校验或制表。
 - 不要删除 `*.invalid.jsonl`；它们用于审计首次解析失败和后续重试。
-- `Llama` 当前结果为 `NA`，不能解释为模型预测或缺失样本。
+- `Llama` 已完成批量预测，其结果列为解析后的 `E/C/N` 标签。
 - 本仓库尚未声明开源许可证；代码使用权限以仓库所有者后续添加的许可证为准。

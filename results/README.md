@@ -12,7 +12,8 @@ Split, Sample, Gold, Qwen_Thinking, Qwen_NoThinking,
 Llama, Gemma, Mistral, DeepSeek, Phi
 ```
 
-预测标签为 `E`、`C`、`N`。Llama 未运行，因此该列为 `NA`。
+预测标签为 `E`、`C`、`N`。Llama 已通过 Ollama `llama3.1:8b` 完成五个 split，
+该列为实际解析结果，不是 `NA` 占位值。
 
 ## 长表
 

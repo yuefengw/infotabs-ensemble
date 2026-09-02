@@ -44,16 +44,20 @@ def main() -> None:
         if row.get("parsed_prediction") in VALID_LABELS
     }
     for extra_dir in args.extra_dir:
-        for path in extra_dir.expanduser().resolve().glob(
-            f"out_{spec['output_prefix']}_{args.condition}_{args.split}_part*.jsonl"
-        ):
-            if path.name.endswith(".invalid.jsonl"):
-                continue
-            completed.update(
-                row.get("sample_id")
-                for row in load_jsonl(path)
-                if row.get("parsed_prediction") in VALID_LABELS
-            )
+        resolved_extra_dir = extra_dir.expanduser().resolve()
+        shard_names = {
+            f"out_{spec['output_prefix']}_{args.condition}_{args.split}_part*.jsonl",
+            f"out_{args.model}_{args.condition}_{args.split}_part*.jsonl",
+        }
+        for shard_name in shard_names:
+            for path in resolved_extra_dir.glob(shard_name):
+                if path.name.endswith(".invalid.jsonl"):
+                    continue
+                completed.update(
+                    row.get("sample_id")
+                    for row in load_jsonl(path)
+                    if row.get("parsed_prediction") in VALID_LABELS
+                )
     pending = [row for row in records if row.get("sample_id") not in completed]
     args.output_dir.expanduser().resolve().mkdir(parents=True, exist_ok=True)
 
